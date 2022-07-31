@@ -47,13 +47,24 @@ function SearchEngine() {
 
   let form = (
     <form onSubmit={handleSubmit}>
-      <input
-        type="search"
-        placeholder="Enter a city..."
-        autoFocus={true}
-        onChange={updateCity}
-      />
-      <input type="submit" value="Search" />
+      <div className="row">
+        <div className="col-9">
+          <input
+            className="form-control"
+            type="search"
+            placeholder="Enter a city..."
+            autoFocus={true}
+            onChange={updateCity}
+          />
+        </div>
+        <div className="col-3">
+          <input
+            type="submit"
+            value="Search"
+            className="btn btn-primary w-100"
+          />
+        </div>
+      </div>
     </form>
   );
 
