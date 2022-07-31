@@ -1,7 +1,13 @@
 import SearchEngine from "../Components/SearchEngine";
 import "./WeatherApp.css";
+import axios from "axios";
 
 function WeatherApp() {
+  const apiKey = "d8426e0d7454e83e722791e94527aed3";
+  let city = "Edinburgh";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric
+    `;
+
   return (
     <div className="WeatherApp">
       <SearchEngine />
@@ -12,16 +18,14 @@ function WeatherApp() {
       </ul>
       <div className="row mt-3">
         <div className="col-6">
-          <div className="clearfix">
+          <div className="d-flex">
             <img
               src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
               alt="Mostly Cloudy"
-              className="float-left"
+              className="d-flex"
             />
-            <div className="float-left">
-              <span className="temperature">18</span>
-              <span className="unit">°C</span>
-            </div>
+            <span className="temperature">18</span>
+            <span className="unit">°C</span>
           </div>
         </div>
         <div className="col-6">
