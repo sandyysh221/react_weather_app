@@ -5,7 +5,7 @@ import WeatherApp from "./Containers/WeatherApp";
 function App() {
   return (
     <div className="App">
-      <WeatherApp />
+      <WeatherApp defaultCity="Toronto" />
       <Footer />
     </div>
   );
