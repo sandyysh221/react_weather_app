@@ -19,6 +19,7 @@ function WeatherApp({ defaultCity }) {
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),
+      coordinates: response.data.coord,
     });
   }
 
@@ -61,7 +62,7 @@ function WeatherApp({ defaultCity }) {
           </div>
         </form>
         <WeatherInfo weatherData={weatherData} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
