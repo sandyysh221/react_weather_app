@@ -17,7 +17,7 @@ function WeatherInfo({ weatherData }) {
         <div className="col-6">
           <div className="d-flex">
             <div className="d-flex">
-              <WeatherIcon code={weatherData.icon} />
+              <WeatherIcon code={weatherData.icon} size={54} />
             </div>
             <div className="d-flex">
               <WeatherTemperature celsius={weatherData.temperature} />

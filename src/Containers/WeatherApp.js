@@ -3,6 +3,7 @@ import "./WeatherApp.css";
 import axios from "axios";
 import React, { useState } from "react";
 import WeatherInfo from "../Components/WeatherInfo";
+import WeatherForecast from "../Components/WeatherForecast";
 
 function WeatherApp({ defaultCity }) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -60,6 +61,7 @@ function WeatherApp({ defaultCity }) {
           </div>
         </form>
         <WeatherInfo weatherData={weatherData} />
+        <WeatherForecast />
       </div>
     );
   } else {
