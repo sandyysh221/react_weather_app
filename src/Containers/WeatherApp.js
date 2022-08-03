@@ -40,6 +40,21 @@ function WeatherApp({ defaultCity }) {
     setCity(event.target.value);
   }
 
+  function findLocation(position) {
+    let lon = position.coords.longitude;
+    let lat = position.coords.latitude;
+
+    let apiKey = "d8426e0d7454e83e722791e94527aed3";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function currentPosition(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(findLocation);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="WeatherApp">
@@ -60,6 +75,13 @@ function WeatherApp({ defaultCity }) {
                 value="Search"
                 className="btn btn-primary w-100"
               />
+              <button
+                className="btn btn-primary w-100"
+                type="submit"
+                onClick={currentPosition}
+              >
+                Current Location
+              </button>
             </div>
           </div>
         </form>
