@@ -15,6 +15,7 @@ function WeatherApp({ defaultCity }) {
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
+      feelsLike: response.data.main.feels_like,
       city: response.data.name,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,

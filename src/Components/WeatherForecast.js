@@ -16,9 +16,15 @@ function WeatherForecast({ coordinates }) {
     return (
       <div className="WeatherForecast">
         <div className="row">
-          <div className="col">
-            <WeatherForecastDay dayForecast={forecast[0]} />
-          </div>
+          {forecast.map(function (dailyForecast, index) {
+            if (index > 0 && index < 6) {
+              return (
+                <div className="col" key={index}>
+                  <WeatherForecastDay dayForecast={dailyForecast} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );
