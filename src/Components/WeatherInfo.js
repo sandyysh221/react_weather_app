@@ -3,7 +3,7 @@ import FormattedDate from "../Components/FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
 
-function WeatherInfo({ weatherData }) {
+function WeatherInfo({ weatherData, unit, setUnit }) {
   return (
     <div className="WeatherInfo">
       <h1>{weatherData.city}</h1>
@@ -20,7 +20,12 @@ function WeatherInfo({ weatherData }) {
               <WeatherIcon code={weatherData.icon} size={54} />
             </div>
             <div className="d-flex">
-              <WeatherTemperature celsius={weatherData.temperature} />
+              <WeatherTemperature
+                celsius={weatherData.temperature}
+                unit={unit}
+                setUnit={setUnit}
+                fahrenheit={(weatherData.temperature * 9) / 5 + 32}
+              />
             </div>
           </div>
         </div>

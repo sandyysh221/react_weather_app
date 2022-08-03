@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import "./WeatherTemperature.css";
 
-function WeatherTemperature({ celsius }) {
-  const [unit, setUnit] = useState("celsius");
-
+function WeatherTemperature({ celsius, fahrenheit, unit, setUnit }) {
   function showFahrenheit(event) {
     event.preventDefault();
     setUnit("fahrenheit");

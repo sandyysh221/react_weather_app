@@ -8,6 +8,7 @@ import WeatherForecast from "../Components/WeatherForecast";
 function WeatherApp({ defaultCity }) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(defaultCity);
+  const [unit, setUnit] = useState("celsius");
 
   function handleResponse(response) {
     setWeatherData({
@@ -62,8 +63,12 @@ function WeatherApp({ defaultCity }) {
             </div>
           </div>
         </form>
-        <WeatherInfo weatherData={weatherData} />
-        <WeatherForecast coordinates={weatherData.coordinates} />
+        <WeatherInfo weatherData={weatherData} unit={unit} setUnit={setUnit} />
+        <WeatherForecast
+          coordinates={weatherData.coordinates}
+          unit={unit}
+          setUnit={setUnit}
+        />
       </div>
     );
   } else {

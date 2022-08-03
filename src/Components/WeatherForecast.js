@@ -3,7 +3,7 @@ import "./WeatherForecast.css";
 import axios from "axios";
 import WeatherForecastDay from "./WeatherForecastDay";
 
-function WeatherForecast({ coordinates }) {
+function WeatherForecast({ coordinates, unit, setUnit }) {
   const [loaded, setLoaded] = useState(false);
   const [forecast, setForecast] = useState(null);
 
@@ -24,7 +24,11 @@ function WeatherForecast({ coordinates }) {
             if (index > 0 && index < 6) {
               return (
                 <div className="col" key={index}>
-                  <WeatherForecastDay dayForecast={dailyForecast} />
+                  <WeatherForecastDay
+                    dayForecast={dailyForecast}
+                    unit={unit}
+                    setUnit={setUnit}
+                  />
                 </div>
               );
             }
