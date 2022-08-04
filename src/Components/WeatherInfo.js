@@ -32,7 +32,6 @@ function WeatherInfo({ weatherData, unit, setUnit }) {
         </div>
         <div className="col-6">
           <ul>
-            <li>Feels Like: {Math.round(weatherData.feelsLike)}°</li>
             <li>Humidity: {weatherData.humidity}%</li>
             <li>Wind: {Math.round(weatherData.wind)} km/h</li>
           </ul>
