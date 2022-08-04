@@ -71,6 +71,10 @@
     border: none;
   }
 
+  .WeatherApp form {
+    padding: 50px;
+  }
+
   .WeatherApp .media-btn {
     margin-left: -15px;
     display: flex;
@@ -94,9 +98,5 @@
 
   .WeatherApp li {
     font-size: 14px;
-  }
-
-  .WeatherApp .location-btn {
-    display: flex;
   }
 }
