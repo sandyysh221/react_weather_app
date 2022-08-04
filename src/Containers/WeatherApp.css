@@ -1,5 +1,5 @@
 .WeatherApp {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Noto Sans", sans-serif;
   border: 1px solid #dadde1;
   color: #606b6b;
   border-radius: 4px;
@@ -7,10 +7,11 @@
 }
 
 .WeatherApp h1 {
+  font-family: "PT Serif", serif;
   font-size: 3rem;
   font-weight: 700;
   line-height: 30px;
-  margin: 20px 0 20px 0;
+  margin: 20px 0 0 0;
   color: #000;
 }
 
@@ -34,7 +35,7 @@
 
 .WeatherApp form {
   background: #e7f6f2;
-  padding: 20px;
+  padding: 25px;
 }
 
 .WeatherApp hr {

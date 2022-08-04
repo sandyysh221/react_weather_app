@@ -19,6 +19,7 @@ function WeatherApp({ defaultCity }) {
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       city: response.data.name,
+      country: response.data.sys.country,
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
       date: new Date(response.data.dt * 1000),

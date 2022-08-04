@@ -5,9 +5,13 @@ import WeatherTemperature from "./WeatherTemperature";
 import "./WeatherInfo.css";
 
 function WeatherInfo({ weatherData, unit, setUnit }) {
+  let flagUrl = `https://countryflagsapi.com/svg/${weatherData.country}`;
+
   return (
     <div className="WeatherInfo">
-      <h1>{weatherData.city}</h1>
+      <h1>
+        {weatherData.city} <img src={flagUrl} width="80" height="60" />
+      </h1>
       <ul>
         <li>
           <FormattedDate date={weatherData.date} />
@@ -18,7 +22,7 @@ function WeatherInfo({ weatherData, unit, setUnit }) {
         <div className="col-6">
           <div className="d-flex">
             <div className="d-flex">
-              <WeatherIcon code={weatherData.icon} size={54} />
+              <WeatherIcon code={weatherData.icon} size={62} />
             </div>
             <div className="d-flex">
               <WeatherTemperature

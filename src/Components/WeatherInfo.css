@@ -2,8 +2,7 @@
   padding: 20px;
 }
 
-@media (max-width: 900px) {
-  .WeatherIcon {
-    size: 30px;
-  }
+.WeatherInfo img {
+  position: relative;
+  top: -5px;
 }
