@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./WeatherTemperature.css";
 
 function WeatherTemperature({ celsius, fahrenheit, unit, setUnit }) {
