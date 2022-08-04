@@ -1,7 +1,25 @@
 .WeatherTemperature .unit {
   color: rgb(33, 33, 33);
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 600;
   position: relative;
   line-height: 1;
+}
+
+.WeatherTemperature .unit a {
+  color: #a5c9ca;
+  text-decoration: none;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.WeatherTemperature .unit a:hover {
+  text-decoration: underline;
+  color: #395b64;
+}
+
+@media (max-width: 900px) {
+  .WeatherTemperature .unit {
+    font-size: 14px;
+  }
 }

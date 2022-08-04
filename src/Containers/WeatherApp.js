@@ -4,6 +4,8 @@ import axios from "axios";
 import React, { useState } from "react";
 import WeatherInfo from "../Components/WeatherInfo";
 import WeatherForecast from "../Components/WeatherForecast";
+import { BsSearch } from "react-icons/bs";
+import { BiCurrentLocation } from "react-icons/bi";
 
 function WeatherApp({ defaultCity }) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -59,7 +61,7 @@ function WeatherApp({ defaultCity }) {
     return (
       <div className="WeatherApp">
         <form onSubmit={handleSubmit}>
-          <div className="row">
+          <div className="row search-section">
             <div className="col-9">
               <input
                 type="search"
@@ -70,22 +72,25 @@ function WeatherApp({ defaultCity }) {
               />
             </div>
             <div className="col-3">
-              <input
+              <button
                 type="submit"
                 value="Search"
-                className="btn btn-primary w-100"
-              />
+                className="btn w-40 location-btn"
+              >
+                <BsSearch />
+              </button>
               <button
-                className="btn btn-primary w-100"
+                className="btn w-40 location-btn"
                 type="submit"
                 onClick={currentPosition}
               >
-                Current Location
+                <BiCurrentLocation />
               </button>
             </div>
           </div>
         </form>
         <WeatherInfo weatherData={weatherData} unit={unit} setUnit={setUnit} />
+        <hr />
         <WeatherForecast
           coordinates={weatherData.coordinates}
           unit={unit}

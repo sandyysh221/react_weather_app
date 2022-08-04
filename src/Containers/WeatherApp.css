@@ -1,16 +1,17 @@
 .WeatherApp {
   font-family: Arial, Helvetica, sans-serif;
   border: 1px solid #dadde1;
-  color: #878787;
-  padding: 16px;
+  color: #606b6b;
   border-radius: 4px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .WeatherApp h1 {
-  font-size: 24px;
-  font-weight: 100;
+  font-size: 3rem;
+  font-weight: 700;
   line-height: 30px;
-  margin: 20px 0 0 0;
+  margin: 20px 0 20px 0;
+  color: #000;
 }
 
 .WeatherApp ul {
@@ -31,6 +32,16 @@
   display: inline-block;
 }
 
+.WeatherApp form {
+  background: #e7f6f2;
+  padding: 20px;
+}
+
+.WeatherApp hr {
+  margin: 0px;
+  color: #395b64;
+}
+
 .WeatherApp .temperature {
   font-weight: bold;
   color: rgb(33, 33, 33);
@@ -39,10 +50,39 @@
   line-height: 64px;
 }
 
-.WeatherApp .unit {
-  color: rgb(33, 33, 33);
-  font-size: 16px;
-  font-weight: 400;
-  position: relative;
-  line-height: 1;
+.WeatherApp .location-btn {
+  display: inline-block;
+  color: #395b64;
+  background: #a5c9ca;
+  border: 2px solid #97c4b8;
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+  margin-right: 15px;
+}
+
+.WeatherApp .location-btn:hover {
+  background: #f9f3ee;
+  color: #97c4b8;
+}
+
+@media (max-width: 900px) {
+  .WeatherTemperature .temperature {
+    font-size: 52px;
+  }
+
+  .WeatherApp h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 20px 0 20px 0;
+    color: #000;
+  }
+
+  .WeatherApp li {
+    font-size: 14px;
+  }
+
+  .WeatherApp .location-btn {
+    display: flex;
+  }
 }

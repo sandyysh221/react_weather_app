@@ -27,7 +27,7 @@ function WeatherIcon({ code, size }) {
     <div className="WeatherIcon">
       <ReactAnimatedWeather
         icon={codeMapping[code]}
-        color="#1d6ef8"
+        color="#395B64"
         size={size}
         animate={true}
       />

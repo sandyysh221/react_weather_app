@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "../Components/FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import "./WeatherInfo.css";
 
 function WeatherInfo({ weatherData, unit, setUnit }) {
   return (
