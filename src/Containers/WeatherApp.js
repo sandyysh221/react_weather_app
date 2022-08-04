@@ -72,20 +72,22 @@ function WeatherApp({ defaultCity }) {
               />
             </div>
             <div className="col-3">
-              <button
-                type="submit"
-                value="Search"
-                className="btn w-40 location-btn"
-              >
-                <BsSearch />
-              </button>
-              <button
-                className="btn w-40 location-btn"
-                type="submit"
-                onClick={currentPosition}
-              >
-                <BiCurrentLocation />
-              </button>
+              <div className="media-btn">
+                <button
+                  type="submit"
+                  value="Search"
+                  className="btn w-40 location-btn"
+                >
+                  <BsSearch />
+                </button>
+                <button
+                  className="btn w-40 location-btn"
+                  type="submit"
+                  onClick={currentPosition}
+                >
+                  <BiCurrentLocation />
+                </button>
+              </div>
             </div>
           </div>
         </form>

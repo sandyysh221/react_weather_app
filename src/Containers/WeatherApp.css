@@ -66,6 +66,20 @@
 }
 
 @media (max-width: 900px) {
+  .WeatherApp {
+    box-shadow: none;
+    border: none;
+  }
+
+  .WeatherApp .media-btn {
+    margin-left: -15px;
+    display: flex;
+  }
+
+  .WeatherApp .location-btn {
+    margin-right: 5px;
+  }
+
   .WeatherTemperature .temperature {
     font-size: 52px;
   }
